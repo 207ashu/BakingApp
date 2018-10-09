@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Grandma"'s Kitchen</string>
+    <string name="appwidget_text">Recipe Widget</string>
+    <string name="add_widget">Add widget</string>
+    <string name="main_title">Recipe"'s</string>
+    <string name="recipe_title">Title</string>
+    <string name="step_title">Steps</string>
+    <string name="ingredient_title">Ingredient</string>
+    <string name="quantity_title">Quantity:</string>
+    <string name="recipe_detail_title">Recipe detail</string>
+    <string name="step_detail_title">Step detail</string>
+    <string name="no_video_available_title">No video available</string>
+    <string name="recipe_image_description">Recipe image</string>
+    <string name="error_loading_data">Error loading data</string>
+    <string name="retry">RETRY</string>
+    <string name="widget_added_text">Ingredient\'s added to widget!</string>
+    <string name="widget_not_added_text">Some problem occurred. Try again.</string>
+</resources>

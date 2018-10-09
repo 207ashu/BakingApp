@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    tools:context="com.neurobreach.bakingapp.IngredientDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="22dp">
+
+        <TextView
+            android:id="@+id/ingredient_title"
+            android:textSize="22sp"
+            android:textColor="#eb9f6969"
+            tools:text="Title"
+            android:fontFamily="sans-serif-condensed"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/quantity_title"
+                tools:text="Quantity: "
+                android:textColor="#981a0e0e"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/ingredient_quantity"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#b99f6969"
+                tools:text="12"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/ingredient_measure"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#b99f6969"
+                tools:text="G"
+                android:fontFamily="serif-monospace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d2b9b9b9"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"/>
+
+</LinearLayout>
