@@ -41,7 +41,6 @@
         <activity
             android:name=".StepDetailActivity"
             android:label="@string/step_detail_title"
-            android:configChanges="orientation|screenSize"
             android:parentActivityName=".RecipeDetailActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

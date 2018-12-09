@@ -49,6 +49,8 @@ public class StepDetailFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_step_detail, container, false);
         ButterKnife.bind(this, rootView);
 
+
+
         if (savedInstanceState == null) {
             ConnectivityManager connMgr = (ConnectivityManager) getActivity()
                     .getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -112,16 +114,43 @@ public class StepDetailFragment extends Fragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putSerializable("ser", stepsModel);
+        outState.putLong("position", mExoPlayer.getCurrentPosition());
+        outState.putBoolean("state", mExoPlayer.getPlayWhenReady());
+
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+
+    }
+
+    /*
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         if (stepsModel != null)
             releasePlayer();
-    }
+    }*/
+
 
     public void setStepsModel(StepsModel stepsModel) {
         this.stepsModel = stepsModel;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (Util.SDK_INT <= 23) {
+            releasePlayer();
+        }
+    }
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (Util.SDK_INT > 23) {
+            releasePlayer();
+        }
     }
 }
